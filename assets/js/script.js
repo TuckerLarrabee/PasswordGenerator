@@ -2,13 +2,13 @@
 
 // After user has selected the types of characters for their password, select those values randomly from the arrays and concatenate them to the desired length of the password.
 
-
+var passLength = '';
 var lower = '';
 var upper = '';
 var num = '';
 var spec = '';
 
-//Arrays:
+//Arrays: 
 var lowerC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -19,14 +19,16 @@ var specialC = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 
 var passwordValues = function () {
 
-  // var length = function () {
-  //   var leng = window.prompt("Please select a numerical length for your password between 8 and 128.");
-  //     if (leng === number between 8 and 128) {
-  //     return leng;
-  //   } else {window.alert("Please enter a valid length between 8 and 128");
-  //   length ();}
-
-
+  var length = function () {
+      var leng = window.prompt("Please select a numerical length for your password between 8 and 128.");  
+        if (parseInt(leng) >= 8 && parseInt(leng) <= 128) {
+          passLength = leng;
+      } else {
+          window.alert("You have selected an invalid password length. Please enter a valid value.");
+          length();
+        }
+  };
+      
 
   var lowercase = function () {
       lower = window.prompt("Would you like to include lowercase characters? Please enter 'Yes' or 'No'.");
@@ -80,6 +82,7 @@ var passwordValues = function () {
         };
     };
 
+length();
 lowercase();
 uppercase();
 numeric();
@@ -97,25 +100,28 @@ special();
 // if the button is clicked, the prompts appear
 // after entering valid inputs in each prompt, the password is generated
 
-passwordValues();
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
-console.log(lowerC)
+// Write password to the #password input
+function writePassword() {
+  var password = passwordValues();
+  console.log(passLength, lower, upper, num, spec);
 
-// console.log("Your lowercase value is " + lower + ".");
-// console.log("Your uppercase value is " + upper + ".");
+  var arrayArray = [lowerC, upperC, number, specialC];
+  console.log(arrayArray);
+
+  var randomArray = arrayArray[Math.floor(arrayArray.length * Math.random())];
+  console.log(randomArray);
+
+  var randomValue = randomArray[Math.floor(randomArray.length * Math.random())];
+  console.log("This is lowercase " + randomValue);
 
 
-// // Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
+  var passwordText = document.querySelector("#password");
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
 
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);}]
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
