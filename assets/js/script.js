@@ -2,6 +2,8 @@
 
 // After user has selected the types of characters for their password, select those values randomly from the arrays and concatenate them to the desired length of the password.
 
+
+
 var lower = '';
 var upper = '';
 var num = '';
@@ -9,11 +11,8 @@ var spec = '';
 
 //Arrays:
 var lowerC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
 var upperC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
 var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
 var specialC = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 
 
@@ -27,6 +26,8 @@ var passwordValues = function () {
   //     return leng;
   //   } else {window.alert("Please enter a valid length between 8 and 128");
   //   length ();}
+
+
 
   var lowercase = function () {
       lower = window.prompt("Would you like to include lowercase characters? Please enter 'Yes' or 'No'.");
@@ -98,6 +99,8 @@ special();
 // after entering valid inputs in each prompt, the password is generated
 
 passwordValues();
+
+console.log(lowerC)
 
 // console.log("Your lowercase value is " + lower + ".");
 // console.log("Your uppercase value is " + upper + ".");
