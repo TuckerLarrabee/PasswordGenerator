@@ -1,5 +1,8 @@
 // Assignment code here
-
+var lower = '';
+var upper = '';
+var num = '';
+var spec = '';
 
 
 // if button is clicked, then window.prompts for each: 
@@ -14,57 +17,56 @@ var passwordValues = function () {
   //   length ();}
 
   var lowercase = function () {
-      var lower = window.prompt("Would you like to include lowercase characters? Please enter 'Yes' or 'No'.");
+      lower = window.prompt("Would you like to include lowercase characters? Please enter 'Yes' or 'No'.");
         if (lower === "yes" || lower === "Yes") {
           lower = true;
           console.log(lower);
-      } else if (lower === "No" || lower === "no") {
+        } else if (lower === "No" || lower === "no") {
           lower = false;
           console.log(lower);
-      } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
-      lowercase ();
+        } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
+          lowercase ();
+        };
     };
-  };
-
 
   var uppercase = function () {
-      var upper = window.prompt("Would you like to include uppercase characters? Please enter 'Yes' or 'No'.");
+      upper = window.prompt("Would you like to include uppercase characters? Please enter 'Yes' or 'No'.");
         if (upper === "yes" || upper === "Yes") {
-            upper = true;
-            console.log(upper);
-          } else if (upper === "no" || upper === "No") {
-            upper = false;
-            console.log(upper);
-          } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
-            uppercase ();
-            };
+          upper = true;
+          console.log(upper);
+        } else if (upper === "no" || upper === "No") {
+          upper = false;
+          console.log(upper);
+        } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
+          uppercase ();
+        };
     };
 
   var numeric = function () {
-      var num = window.prompt("Would you like to include numbers? Please enter 'Yes' or 'No'.");
+      num = window.prompt("Would you like to include numbers? Please enter 'Yes' or 'No'.");
         if (num === "yes" || num === "Yes") {
-            num = true;
-            console.log(num);
-          } else if (num === "no" || num === "No") {
-            num = false;
-            console.log(num);
-          } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
-            numeric();
+          num = true;
+          console.log(num);
+        } else if (num === "no" || num === "No") {
+          num = false;
+          console.log(num);
+        } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
+          numeric();
         };
     };
 
   var special = function () {
-      var spec = window.prompt("Would you like to include special characters? Please enter 'Yes' or 'No'.");
+      spec = window.prompt("Would you like to include special characters? Please enter 'Yes' or 'No'.");
         if (spec === "yes" || spec === "Yes") {
-            spec = true;
-            console.log(spec);
-          } else if (spec === "no" || spec === "No") {
-            spec = false;
-            console.log(spec);
-          } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
+          spec = true;
+          console.log(spec);
+        } else if (spec === "no" || spec === "No") {
+          spec = false;
+          console.log(spec);
+        } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
           special();
         };
-  };
+    };
 
   lowercase();
   uppercase();
@@ -78,40 +80,15 @@ var passwordValues = function () {
 
 };
 
-
-//   var numeric = function () {
-//     var numer = window.prompt("Would you like to include numbers? Please enter 'yes' or 'no'.");
-//       if (numer === "yes" || "Yes") {
-//         return true;
-//       } else if (numer === "no" || numeric === "No") {
-//         return false;
-//       } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
-//     numeric();
-//   };
-
-//   var special = function () {
-//     var spec = window.prompt("Would you like to include special characters? Please enter 'yes' or 'no'.");
-//       if (spec === "yes" || "Yes") {
-//         return true;
-//       } else if (spec === "no" || special === "No") {
-//         return false
-//       } else {window.alert("Your response is invalid. Please enter either 'Yes' or 'No'.");
-//     special();
-//   };
-
-// };
-
 // AT LEAST ONE CHARACTER TYPE MUST BE TRUE
-
-
 
 // if the button is clicked, the prompts appear
 // after entering valid inputs in each prompt, the password is generated
 
 passwordValues();
 
-
-
+// console.log("Your lowercase value is " + lower + ".");
+// console.log("Your uppercase value is " + upper + ".");
 
 
 // // Get references to the #generate element
