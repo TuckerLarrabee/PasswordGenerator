@@ -4,38 +4,53 @@
 
 // if button is clicked, then window.prompts for each: 
 
-// var length = window.prompt("Please select a numerical length for your password between 8 and 128.")
+//var passwordValues = function () {
+
+// var length = function () {
+// window.prompt("Please select a numerical length for your password between 8 and 128.")
 // if (length === number between 8 and 128) {
 //  return length;
-// } else {window.alert("Please enter a valid length between 8 and 128")}
+// } else {window.alert("Please enter a valid length between 8 and 128");
+//   length ();}
 
-// var lowercase = window.prompt("Would you like to include lowercase characters? Please enter 'yes' or 'no'.")
+// var lowercase = function () {
+// window.prompt("Would you like to include lowercase characters? Please enter 'yes' or 'no'.")
 // if (lowercase === "yes" || "Yes") {
 // return true
 // } else if (lowercase === "no" || lowercase === "No") {
 // return false
-// } else {window.alert("You need to enter either "Yes" or "No".)};
+// } else {window.alert("You need to enter either "Yes" or "No".)
+// lowercase ()
+// };
 
-// var uppercase = window.prompt("Would you like to include uppercase characters? Please enter 'yes' or 'no'.")
+// var uppercase = function () {
+// window.prompt("Would you like to include uppercase characters? Please enter 'yes' or 'no'.")
 // if (uppercase === "yes" || "Yes") {
 // return true
 // } else if (uppercase === "no" || uppercase === "No") {
 // return false
-// } else {window.alert("You need to enter either "Yes" or "No".)};
+// } else {window.alert("You need to enter either "Yes" or "No".)
+// uppercase ()
+// };
 
-// var numeric = window.prompt("Would you like to include numbers? Please enter 'yes' or 'no'.")
+// var numeric = function () {
+// window.prompt("Would you like to include numbers? Please enter 'yes' or 'no'.")
 // if (numeric === "yes" || "Yes") {
 // return true
 // } else if (numeric === "no" || numeric === "No") {
 // return false
-// } else {window.alert("You need to enter either "Yes" or "No".)};
+// } else {window.alert("You need to enter either "Yes" or "No".)
+// numeric()
+// };
 
-// var special = window.prompt("Would you like to include special characters? Please enter 'yes' or 'no'.")
+// var special = function () {
+// window.prompt("Would you like to include special characters? Please enter 'yes' or 'no'.")
 // if (special === "yes" || "Yes") {
 // } else if (special === "no" || special === "No") {
 // return false
-// } else {window.alert("You need to enter either "Yes" or "No".)};
-
+// } else {window.alert("You need to enter either "Yes" or "No".)
+// special()
+// };
 
 // AT LEAST ONE CHARACTER TYPE MUST BE TRUE
 
