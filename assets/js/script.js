@@ -3,7 +3,6 @@
 // After user has selected the types of characters for their password, select those values randomly from the arrays and concatenate them to the desired length of the password.
 
 
-
 var lower = '';
 var upper = '';
 var num = '';
