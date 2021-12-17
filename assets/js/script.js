@@ -1,8 +1,20 @@
 // Assignment code here
+
+// After user has selected the types of characters for their password, select those values randomly from the arrays and concatenate them to the desired length of the password.
+
 var lower = '';
 var upper = '';
 var num = '';
 var spec = '';
+
+//Arrays:
+var lowerC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var upperC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+var specialC = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
 
 
 // if button is clicked, then window.prompts for each: 
@@ -68,12 +80,12 @@ var passwordValues = function () {
         };
     };
 
-  lowercase();
-  uppercase();
-  numeric();
-  special();
+lowercase();
+uppercase();
+numeric();
+special();
 
-  if (lowercase.lower === false && uppercase.upper === false && numeric.num === false && special.spec == false) {
+  if (lower === false && upper === false && num === false && spec === false) {
     window.alert("You did not select any characters to be included. Please select 'Yes' for at least one character type.")
     passwordValues();
   }
